@@ -1,0 +1,5 @@
+<div id="{{site.title}}" class={{divColumn}} *ngFor="let site of sites; let i = index">
+  <div id="{{site.title}}Text" (click)="loadPage(site.title)" class="textDiv">{{site.title}}<span class="subText">{{site.text}}</span></div>
+  <div id="{{site.title}}Block" class="blockDiv" [ngStyle]="{'background': colors[i]}"></div>
+  <iframe id="{{site.title}}Frame" [src]=sanitizer.bypassSecurityTrustResourceUrl(site.site)></iframe>
+</div>

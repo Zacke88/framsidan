@@ -1,0 +1,45 @@
+@import '../../variables.scss';
+
+.headerDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    color: $accent-darkblue;
+}
+
+.title {
+    text-align: center;
+    padding: 0 10% 0 10%;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    min-width: 140px;
+    max-width: 260px;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.midDiv {
+    padding: 0 40px;
+}
+
+a {
+    padding: 0 20px 10px 0;
+    display: inline-block;
+    color: $primary-blue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: $accent-darkblue;
+}
+

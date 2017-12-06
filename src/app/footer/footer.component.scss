@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+
+.footerDiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 8vh;
+}
+
+a {
+    color: $primary-blue;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: $accent-darkblue;
+}
+
+#backButton {
+    font-size: 4em;
+    cursor: pointer;
+    color: $primary-blue;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+#backButton:hover {
+    color: $accent-darkblue;
+}
+
+
+
+.centerDiv {
+    padding-top: 2vh;
+    text-align: center;
+}
+
+span {
+    margin: 0 4px 0 0;
+}
+
+.label-primary {
+    background: $accent-darkblue;
+}
