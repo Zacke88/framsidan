@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SiteDataService } from '../site-data.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,7 +10,7 @@ export class FooterComponent implements OnInit {
 
   version = "0.70";
 
-  constructor() { }
+  constructor(private siteDate: SiteDataService) { }
 
   ngOnInit() {
 

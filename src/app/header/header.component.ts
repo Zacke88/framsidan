@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SiteDataService } from '../site-data.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   date: string;
-  standardText = "Framsidan";
+  standardText: string;
   standardSubtitleText = "Välkommen till din nya startsida! Välj sida att navigera till.";
   titleText: string;
   subtitleText: string;
 
-  constructor() { }
+  constructor(private siteData: SiteDataService) { }
 
   ngOnInit() {
+      this.siteData.name.subscribe(res => this.standardText = res);
 
     this.setDate();
     this.setStandardText();

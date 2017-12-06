@@ -1,6 +1,7 @@
 import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NgStyle } from '@angular/common';
+import { SiteDataService } from '../site-data.service';
 
 @Component({
   selector: 'app-body-split',
@@ -15,7 +16,7 @@ export class BodySplitComponent implements OnInit {
   // Declare sites within array to include them in the webpage
   sites = [
     { site: "http://intranet.tvab.kiruna.se", title: "Intranät", text: "Här kan du ta del av viktig intern information. Som bland annat nyheter, anställningar och dokument." },
-    { site: "http://tvabc.kiruna.se/Start/MyPage.aspx", title: "Canea", text: "För hantering och uppföljning av projekt, ärenden samt felanmälningar." }
+    { site: "http://intranet.tvab.kiruna.se", title: "Canea", text: "För hantering och uppföljning av projekt, ärenden samt felanmälningar." }
   ];
 
   //Declare filter colors
@@ -29,7 +30,7 @@ export class BodySplitComponent implements OnInit {
     "#80afb6"
   ]
 
-  constructor(public sanitizer: DomSanitizer, private zone:NgZone) { }
+  constructor(public sanitizer: DomSanitizer, private zone:NgZone, private siteData: SiteDataService) { }
 
   ngOnInit() {
     this.colors = this.randomizeArray(this.colors);

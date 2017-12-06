@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { SiteDataService } from './site-data.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -22,7 +24,7 @@ import { BodyFullComponent } from './body-full/body-full.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SiteDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
